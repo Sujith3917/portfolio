@@ -1,0 +1,58 @@
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Stage site files
+        run: |
+          mkdir -p _site
+          cp -r index.html assets css js _site/
+
+      - name: Inject Web3Forms access key
+        env:
+          ACCESS_KEY: ${{ secrets.YOUR_ACCESS_KEY_HERE }}
+        run: |
+          if [ -z "$ACCESS_KEY" ]; then
+            echo "::error::Repository secret YOUR_ACCESS_KEY_HERE is not set."
+            echo "::error::Add it at Settings → Secrets and variables → Actions → New repository secret."
+            exit 1
+          fi
+          sed -i "s|YOUR_ACCESS_KEY_HERE|${ACCESS_KEY}|g" _site/index.html
+          if grep -q "YOUR_ACCESS_KEY_HERE" _site/index.html; then
+            echo "::warning::Placeholder still present after substitution."
+          else
+            echo "Access key injected successfully."
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
