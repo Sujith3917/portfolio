@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujithkumar B | Full Stack Developer</title>
+    <meta name="description" content="Sujithkumar B - Full Stack Developer specializing in React, Node.js, Express, and MySQL. Building scalable, user-focused web applications.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-orbit">
+                <div class="loader-planet"></div>
+                <div class="loader-ring"></div>
+            </div>
+            <div class="loader-text">INITIALIZING UNIVERSE</div>
+            <div class="loader-progress"><div class="loader-bar"></div></div>
+        </div>
+    </div>
+
+    <!-- Three.js Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-text">SB</span>
+            <span class="logo-bracket">/&gt;</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="Sujithkumar_B_Resume.pdf" download class="nav-resume">
+            <span>Resume</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+        </a>
+        <button class="nav-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section hero">
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span class="dot-pulse"></span>
+                <span>Available for opportunities</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line"><span class="title-greeting">Hi, I'm</span></span>
+                <span class="title-line title-name" data-text="SUJITHKUMAR">SUJITHKUMAR</span>
+                <span class="title-line title-role">
+                    <span class="typed-text"></span><span class="cursor-blink">|</span>
+                </span>
+            </h1>
+            <p class="hero-tagline">
+                Crafting <span class="highlight">stellar web experiences</span> across the digital cosmos —
+                from clean REST APIs to pixel-perfect interfaces.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/Sujith3917" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+                <a href="https://linkedin.com/in/b-sujithkumar" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="mailto:sujithkumar2004b@gmail.com" aria-label="Email">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About <span class="title-accent">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-avatar">
+                    <div class="avatar-frame">
+                        <div class="avatar-rings">
+                            <div class="ring ring-1"></div>
+                            <div class="ring ring-2"></div>
+                            <div class="ring ring-3"></div>
+                        </div>
+                        <div class="avatar-circle">
+                            <svg viewBox="0 0 200 200" class="avatar-svg">
+                                <defs>
+                                    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#00f5ff"/>
+                                        <stop offset="50%" stop-color="#a855f7"/>
+                                        <stop offset="100%" stop-color="#ff00ff"/>
+                                    </linearGradient>
+                                    <filter id="glow">
+                                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                        <feMerge>
+                                            <feMergeNode in="coloredBlur"/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+                                <circle cx="100" cy="100" r="90" fill="none" stroke="url(#avatarGrad)" stroke-width="2" filter="url(#glow)"/>
+                                <text x="100" y="125" text-anchor="middle" fill="url(#avatarGrad)" font-family="Orbitron" font-size="72" font-weight="800" filter="url(#glow)">SB</text>
+                                <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(0,245,255,0.2)" stroke-width="1" stroke-dasharray="4 8"/>
+                            </svg>
+                        </div>
+                        <div class="avatar-particles">
+                            <span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm <span class="highlight">Sujithkumar B</span>, a Full Stack Developer in the making
+                        based in Coimbatore, India.
+                    </p>
+                    <p>
+                        With hands-on experience in <span class="tech-pill">React</span>
+                        <span class="tech-pill">Node.js</span> <span class="tech-pill">Express</span>
+                        and <span class="tech-pill">MySQL</span>, I'm passionate about building
+                        scalable, user-focused web applications backed by clean REST APIs and
+                        well-modeled relational data.
+                    </p>
+                    <p>
+                        My foundation spans JavaScript, Python, Java, and C — and I bring extra
+                        depth from real-time IoT projects where I've integrated sensor pipelines
+                        with cloud platforms. I'm eager to contribute to a fast-moving engineering
+                        team and ship production-ready features end-to-end.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number" data-count="3">0</div>
+                            <div class="stat-label">Major Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-count="15">0</div>
+                            <div class="stat-label">REST APIs Built</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-count="4">0</div>
+                            <div class="stat-label">Languages</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-count="1">0</div>
+                            <div class="stat-label">Published Paper</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Tech <span class="title-accent">Arsenal</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-category="frontend">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+                    </div>
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>React.js</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>HTML5 / CSS3</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="backend">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"/></svg>
+                    </div>
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>REST API Design</li>
+                        <li>JWT Authentication</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="database">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="6" rx="9" ry="3"/><path d="M21 6v6c0 1.66-4.03 3-9 3s-9-1.34-9-3V6M21 12v6c0 1.66-4.03 3-9 3s-9-1.34-9-3v-6"/></svg>
+                    </div>
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                        <li>SQL Optimization</li>
+                        <li>Schema Design</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="languages">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="tools">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h3>Tools & Platforms</h3>
+                    <ul>
+                        <li>Git / GitHub</li>
+                        <li>Postman / VS Code</li>
+                        <li>npm / Arduino IDE</li>
+                        <li>MATLAB</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="iot">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                    </div>
+                    <h3>IoT & Concepts</h3>
+                    <ul>
+                        <li>ESP8266 / Sensors</li>
+                        <li>ThingSpeak Cloud</li>
+                        <li>Data Structures / OOP</li>
+                        <li>MVC / Agile</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Featured <span class="title-accent">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-list">
+                <article class="project-card">
+                    <div class="project-visual">
+                        <div class="project-mockup">
+                            <div class="mockup-header">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mockup-body mockup-kanban">
+                                <div class="kanban-col">
+                                    <div class="kanban-title">TODO</div>
+                                    <div class="kanban-task"></div>
+                                    <div class="kanban-task"></div>
+                                </div>
+                                <div class="kanban-col">
+                                    <div class="kanban-title">DOING</div>
+                                    <div class="kanban-task active"></div>
+                                </div>
+                                <div class="kanban-col">
+                                    <div class="kanban-title">DONE</div>
+                                    <div class="kanban-task done"></div>
+                                    <div class="kanban-task done"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-status status-active">In Progress</span>
+                            <span class="project-num">01</span>
+                        </div>
+                        <h3 class="project-title">TaskFlow</h3>
+                        <p class="project-subtitle">Full Stack Productivity & Team Collaboration App</p>
+                        <p class="project-desc">
+                            A full-stack web app for project management, task assignment, and progress
+                            visualization through a Kanban dashboard. Built with role-based JWT auth,
+                            normalized MySQL schema, and 15+ RESTful endpoints.
+                        </p>
+                        <ul class="project-features">
+                            <li>Drag-and-drop Kanban board with real-time updates</li>
+                            <li>Role-based access (admin / member) with bcrypt-hashed passwords</li>
+                            <li>15+ tested REST endpoints (CRUD, filtering, aggregation)</li>
+                            <li>Reusable React components with Hooks & Context API</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span>React</span><span>Node.js</span><span>Express</span>
+                            <span>MySQL</span><span>JWT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Sujith3917/taskflow" target="_blank" rel="noopener" class="project-link">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card reverse">
+                    <div class="project-visual">
+                        <div class="project-mockup mockup-voice">
+                            <div class="voice-orb">
+                                <div class="voice-wave"></div>
+                                <div class="voice-wave"></div>
+                                <div class="voice-wave"></div>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg>
+                            </div>
+                            <div class="voice-text">"Hey, what's the weather?"</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-status">Completed</span>
+                            <span class="project-num">02</span>
+                        </div>
+                        <h3 class="project-title">Voice-Activated Assistant</h3>
+                        <p class="project-subtitle">Python · Raspberry Pi 4</p>
+                        <p class="project-desc">
+                            A Python-based voice assistant on Raspberry Pi 4 capable of handling 10+
+                            command categories — schedule management, language translation, news,
+                            dictionary lookups, and interactive quizzes — with sub-2-second response.
+                        </p>
+                        <ul class="project-features">
+                            <li>Google Speech API + pyttsx3 for hands-free interaction</li>
+                            <li>Modular plug-in architecture for adding new skills</li>
+                            <li>Sub-2-second response time on local commands</li>
+                            <li>Runs entirely on Raspberry Pi 4 hardware</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span>Python</span><span>Raspberry Pi</span><span>Speech API</span>
+                            <span>pyttsx3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Sujith3917" target="_blank" rel="noopener" class="project-link">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual">
+                        <div class="project-mockup mockup-iot">
+                            <div class="iot-grid">
+                                <div class="iot-metric">
+                                    <span class="metric-label">pH</span>
+                                    <span class="metric-value">7.2</span>
+                                    <div class="metric-bar"><div style="width:72%"></div></div>
+                                </div>
+                                <div class="iot-metric">
+                                    <span class="metric-label">Turbidity</span>
+                                    <span class="metric-value">3.4</span>
+                                    <div class="metric-bar"><div style="width:34%"></div></div>
+                                </div>
+                                <div class="iot-metric">
+                                    <span class="metric-label">Temp</span>
+                                    <span class="metric-value">26°C</span>
+                                    <div class="metric-bar"><div style="width:60%"></div></div>
+                                </div>
+                                <div class="iot-metric">
+                                    <span class="metric-label">Flow</span>
+                                    <span class="metric-value">12L/m</span>
+                                    <div class="metric-bar"><div style="width:48%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-status status-published">Published</span>
+                            <span class="project-num">03</span>
+                        </div>
+                        <h3 class="project-title">Water Quality Monitoring</h3>
+                        <p class="project-subtitle">IoT · ESP8266 · ThingSpeak Cloud</p>
+                        <p class="project-desc">
+                            End-to-end IoT solution streaming 4 water quality parameters from sensors
+                            to a cloud dashboard with threshold-based alerting. Research published at
+                            ICAECT 2024 (CRC Press).
+                        </p>
+                        <ul class="project-features">
+                            <li>Real-time monitoring of pH, turbidity, temperature, flow rate</li>
+                            <li>15-second sensor sampling via ESP8266 NodeMCU over Wi-Fi</li>
+                            <li>Threshold alerts for early contamination detection</li>
+                            <li>SQL-based historical analysis & trend visualization</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span>ESP8266</span><span>Arduino</span><span>ThingSpeak</span>
+                            <span>SQL</span><span>IoT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Sujith3917" target="_blank" rel="noopener" class="project-link">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Education & <span class="title-accent">Credentials</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="edu-grid">
+                <div class="edu-main">
+                    <div class="edu-card">
+                        <div class="edu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                        </div>
+                        <div class="edu-content">
+                            <div class="edu-period">Oct 2022 — Jun 2026</div>
+                            <h3>B.E. Electronics and Communication Engineering</h3>
+                            <p class="edu-school">Sri Ramakrishna Engineering College, Coimbatore</p>
+                            <div class="edu-cgpa">
+                                <span class="cgpa-label">CGPA</span>
+                                <span class="cgpa-value">7.76 / 10</span>
+                            </div>
+                            <p class="edu-courses">
+                                <strong>Coursework:</strong> Data Structures, OOP, DBMS,
+                                Computer Networks, Operating Systems
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="edu-side">
+                    <h3 class="edu-side-title">Certifications</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-badge">PY</div>
+                            <div>
+                                <div class="cert-name">Python for Beginners</div>
+                                <div class="cert-issuer">Infosys Springboard</div>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge">JV</div>
+                            <div>
+                                <div class="cert-name">Java Certification</div>
+                                <div class="cert-issuer">GeeksforGeeks</div>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge">DS</div>
+                            <div>
+                                <div class="cert-name">Data Structures in C</div>
+                                <div class="cert-issuer">Great Learning</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements-block">
+                <h3 class="achievements-title">
+                    <span class="title-accent">Achievements</span> & Publications
+                </h3>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <h4>ICAECT 2024 Publication</h4>
+                        <p>Published research paper on IoT-based water quality monitoring at the ICAECT 2024 Conference (CRC Press).</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                        </div>
+                        <h4>Mini Project Excellence Award</h4>
+                        <p>Recognized for outstanding hardware-software integration in academic project work.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h4>Technical Symposiums</h4>
+                        <p>Participated in SRISHTI 2024 (Saintgits College of Engineering) and SREC INNOVATE technical symposiums.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Let's <span class="title-accent">Connect</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-intro">
+                    <h3>Ready to build something stellar?</h3>
+                    <p>
+                        I'm actively looking for opportunities to contribute to fast-moving
+                        engineering teams. Whether you have a role to fill, a project to discuss,
+                        or just want to say hi — my inbox is open.
+                    </p>
+                </div>
+                <div class="contact-cards">
+                    <a href="mailto:sujithkumar2004b@gmail.com" class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                        </div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">sujithkumar2004b@gmail.com</div>
+                        <div class="contact-cta">Send a message →</div>
+                    </a>
+                    <a href="https://linkedin.com/in/b-sujithkumar" target="_blank" rel="noopener" class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </div>
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value">b-sujithkumar</div>
+                        <div class="contact-cta">Connect →</div>
+                    </a>
+                    <a href="https://github.com/Sujith3917" target="_blank" rel="noopener" class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        </div>
+                        <div class="contact-label">GitHub</div>
+                        <div class="contact-value">Sujith3917</div>
+                        <div class="contact-cta">View profile →</div>
+                    </a>
+                </div>
+
+                <div class="contact-form-wrapper reveal">
+                    <div class="form-header">
+                        <span class="form-label">// SEND_TRANSMISSION</span>
+                        <h3>Or drop a message directly</h3>
+                    </div>
+                    <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Replace YOUR_ACCESS_KEY_HERE with your access key from https://web3forms.com -->
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="hidden" name="subject" value="New message from Portfolio">
+                        <input type="hidden" name="from_name" value="Sujithkumar Portfolio">
+                        <input type="checkbox" name="botcheck" class="hidden-bot" tabindex="-1" autocomplete="off">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <input type="text" name="name" id="form-name" required placeholder=" " autocomplete="name">
+                                <label for="form-name">Your Name</label>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" id="form-email" required placeholder=" " autocomplete="email">
+                                <label for="form-email">Your Email</label>
+                                <span class="form-line"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="form-message" required rows="5" placeholder=" "></textarea>
+                            <label for="form-message">Your Message</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-submit">
+                            <span class="btn-content">
+                                <span>Send Message</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="btn-loader" aria-hidden="true"></span>
+                        </button>
+                        <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <div>
+                <span class="footer-logo">SB</span>
+                <span class="footer-text">Sujithkumar B · Coimbatore, India</span>
+            </div>
+            <div class="footer-meta">
+                <span>Built with HTML · CSS · JS · Three.js</span>
+                <span class="footer-year">© 2026</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="three-scene.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
